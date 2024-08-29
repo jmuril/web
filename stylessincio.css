@@ -1,13 +1,24 @@
-/* Estilos generales del cuerpo */
-body {
-    font-family: Arial, sans-serif;
+/* Configuración básica */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f7f7eb;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal que organiza toda la página con Grid */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "marquesina marquesina"
+        "imagenes historia";
+    grid-gap: 20px;
+    padding: 20px;
 }
 
 /* Estilos para el encabezado */
-header {
+.header {
+    grid-area: header;
     background-color: #00f5cc;
     color: #090707;
     padding: 10px 20px;
@@ -16,14 +27,12 @@ header {
     justify-content: space-between;
 }
 
-
-/* Estilos para la imagen del logo y el nombre del negocio */
 .logo-nombre {
     display: flex;
     align-items: center;
 }
 
-header .logo-nombre img {
+.header .logo-nombre img {
     max-width: 70px;
     margin-right: 10px;
 }
@@ -40,22 +49,16 @@ header .logo-nombre img {
     -webkit-text-fill-color: transparent;
 }
 
-/* Estilos para la barra de navegación */
 nav ul {
     list-style: none; 
     padding: 0;
     margin: 0;
     display: flex; 
     justify-content: center; 
-    background-color: #00f5cc; 
 }
 
 nav ul li {
     margin-right: 20px; 
-}
-
-nav ul li:last-child {
-    margin-right: 0; 
 }
 
 nav ul li a {
@@ -64,7 +67,7 @@ nav ul li a {
     font-weight: bold; 
     padding: 10px 15px; 
     border-radius: 5px; 
-    background-color:#00f5cc; 
+    background-color: #00f5cc; 
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
@@ -75,6 +78,7 @@ nav ul li a:hover {
 
 /* Estilos para la marquesina */
 .marquesina {
+    grid-area: marquesina;
     background-color: #fff8b9;
     color: #080808;
     padding: 10px 0;
@@ -85,28 +89,30 @@ nav ul li a:hover {
 
 /* Estilos para la sección de imágenes e historia */
 .imagenes-historia {
-    padding: 20px;
-    text-align: center;
+    display: grid;
+    grid-template-areas: 
+        "imagenes historia";
+    grid-gap: 20px;
 }
 
 .imagenes-container {
+    grid-area: imagenes;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 .imagenes-container img {
-    width: 45%; /* Ajusta el ancho según la cantidad de imágenes */
+    width: 48%; /* Ajusta el ancho para las imágenes */
     border-radius: 10px;
-}
-
-.imagenes-container:hover {
-    transform: scale(1.02);
     transition: transform 0.2s;
 }
 
-/* Estilos para la sección de historia */
+.imagenes-container img:hover {
+    transform: scale(1.02);
+}
+
 .historia {
+    grid-area: historia;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -121,4 +127,59 @@ nav ul li a:hover {
 .historia p {
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* Media Queries para adaptarse a diferentes dispositivos */
+
+/* Para tablets (pantallas medianas) */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+            "header"
+            "marquesina"
+            "imagenes"
+            "historia";
+    }
+
+    .imagenes-container {
+        flex-direction: column;
+    }
+
+    .imagenes-container img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+/* Para móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+    .nombre-negocio {
+        font-size: 24px;
+    }
+
+    .imagenes-historia {
+        padding: 10px;
+    }
+
+    .marquesina {
+        font-size: 16px;
+    }
+
+    .historia h2 {
+        font-size: 20px;
+    }
+
+    .historia p {
+        font-size: 14px;
+    }
 }
