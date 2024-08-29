@@ -11,7 +11,8 @@ body, html {
     grid-template-areas: 
         "header header"
         "marquesina marquesina"
-        "imagenes historia";
+        "imagenes imagenes"
+        "historia historia";
     grid-gap: 20px;
     padding: 20px;
 }
@@ -91,7 +92,8 @@ nav ul li a:hover {
 .imagenes-historia {
     display: grid;
     grid-template-areas: 
-        "imagenes historia";
+        "imagenes"
+        "historia";
     grid-gap: 20px;
 }
 
@@ -183,3 +185,4 @@ nav ul li a:hover {
         font-size: 14px;
     }
 }
+
