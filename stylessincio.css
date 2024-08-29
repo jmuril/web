@@ -1,0 +1,124 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7eb;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #00f5cc;
+    color: #090707;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Estilos para la imagen del logo y el nombre del negocio */
+.logo-nombre {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-nombre img {
+    max-width: 70px;
+    margin-right: 10px;
+}
+
+.nombre-negocio {
+    font-size: 32px;
+    font-family: 'Great Vibes', cursive;
+    color: #000;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    background-color: #00f5cc; 
+}
+
+nav ul li {
+    margin-right: 20px; 
+}
+
+nav ul li:last-child {
+    margin-right: 0; 
+}
+
+nav ul li a {
+    color: #000000; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    background-color:#00f5cc; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    background-color:  #fff8b9; 
+    color: #000000; 
+}
+
+/* Estilos para la marquesina */
+.marquesina {
+    background-color: #fff8b9;
+    color: #080808;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para la sección de imágenes e historia */
+.imagenes-historia {
+    padding: 20px;
+    text-align: center;
+}
+
+.imagenes-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.imagenes-container img {
+    width: 45%; /* Ajusta el ancho según la cantidad de imágenes */
+    border-radius: 10px;
+}
+
+.imagenes-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+/* Estilos para la sección de historia */
+.historia {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.historia h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.historia p {
+    font-size: 16px;
+    line-height: 1.5;
+}
