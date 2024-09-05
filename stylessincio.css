@@ -77,7 +77,7 @@ nav ul li a:hover {
     color: #000000; 
 }
 
-/* Estilos para la marquesina */
+
 .marquesina {
     grid-area: marquesina;
     background-color: #fff8b9;
@@ -88,7 +88,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Estilos para la sección de imágenes e historia */
+/* Estilos para las imágenes e historia */
 .imagenes-historia {
     display: grid;
     grid-template-areas: 
@@ -104,7 +104,7 @@ nav ul li a:hover {
 }
 
 .imagenes-container img {
-    width: 48%; /* Ajusta el ancho para las imágenes */
+    width: 48%; 
     border-radius: 10px;
     transition: transform 0.2s;
 }
@@ -131,9 +131,10 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
-/* Media Queries para adaptarse a diferentes dispositivos */
 
-/* Para tablets (pantallas medianas) */
+
+/* Responsive */
+/* pantallas medianas*/
 @media (max-width: 768px) {
     .grid-container {
         grid-template-areas: 
@@ -163,7 +164,7 @@ nav ul li a:hover {
     }
 }
 
-/* Para móviles (pantallas pequeñas) */
+/* celulares*/
 @media (max-width: 480px) {
     .nombre-negocio {
         font-size: 24px;
